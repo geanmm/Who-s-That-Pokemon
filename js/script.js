@@ -42,7 +42,7 @@ const checkPokemon = async () => {
   //   data.types[0].type.name,
   //   data.types[typeTwo].type.name
   // );
-  if (data.name == input.value.toLowerCase()) {
+  if (data.name.replace("-", "") == input.value.toLowerCase()) {
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id;
     pokemonImage.classList.remove("shadow");
