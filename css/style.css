@@ -10,9 +10,9 @@
 body {
   text-align: center;
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #373740;
 }
-/* Game css */
 .game_box {
   display: inline-block;
   margin-top: 10%;
@@ -123,7 +123,7 @@ button:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+@media only screen and (max-device-width: 961px) {
   .game_box {
     display: inline-block;
     margin-top: 2%;
@@ -216,11 +216,111 @@ button:hover {
   }
   .button {
     width: 60%;
-    height: 20p;
     padding: 5%;
     border: none;
     border-radius: 2px;
     font-size: clamp(5px, 5vw, 1rem);
+    background-color: #373740;
+    color: white;
+  }
+}
+@media only screen and (max-device-width: 481px) {
+  .game_box {
+    display: inline-block;
+    margin-top: 10%;
+    padding: 8px;
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    min-width: 400px;
+  }
+  .top_bar {
+    height: 18%;
+    background-color: #e84a44;
+    line-height: 3.5vh;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .top_bar h1 {
+    color: white;
+    padding-top: 3%;
+    font-family: "Pokemon Solid", sans-serif;
+    font-size: clamp(3vh, 5vw, 30px);
+    letter-spacing: 8px;
+    text-align: center;
+  }
+  .game_body {
+    height: 100%;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+  }
+  .poke_bg {
+    top: 25%;
+    left: 7%;
+    width: 70vw;
+    min-width: 170px;
+    height: 20vh;
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    position: absolute;
+    border: 1px solid #373740;
+    box-shadow: inset -1px -1px 5px black;
+    border-radius: 2px;
+  }
+  .pokemon_image {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    transform: scale(3) translate(-45%, 30%);
+    max-height: 20%;
+  }
+  .pokemon_data {
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 60%;
+    left: 20%;
+    font-size: clamp(1vh, 2.5vh, 100px);
+  }
+  .pokemon_name {
+    color: #3a444d;
+    text-transform: capitalize;
+  }
+  .answer_buttons {
+    position: absolute;
+    display: block;
+    top: 65%;
+    left: 31%;
+    width: 88%;
+    transform: translate(-30%, 0);
+  }
+  .answer {
+    margin-bottom: 0.1vh;
+    width: 70vw;
+    max-height: 4.8vh;
+    border: none;
+    border-radius: 2px;
+    align-items: center;
+    font-size: clamp(2.1vh, 1vh, 1rem);
+    background-color: #e84a44;
+    color: white;
+  }
+
+  .game_buttons {
+    position: absolute;
+    display: flex;
+    top: 105%;
+    left: 18%;
+    width: 60vw;
+    transform: translate(-30%, 0);
+    gap: 2vw;
+  }
+  .button {
+    width: 100%;
+    padding: 5%;
+    border: none;
+    border-radius: 2px;
+    font-size: clamp(2.1vh, 1vh, 1rem);
     background-color: #373740;
     color: white;
   }

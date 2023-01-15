@@ -60,11 +60,17 @@ function renderAnswers() {
 
   const arr = answerArr;
 
+  function randomAns() {
+    const num = Math.floor(Math.random() * arr.length);
+    const result = arr[num];
+    return result;
+  }
+
   setTimeout(() => {
-    answer1.innerHTML = arr[0];
-    answer2.innerHTML = arr[1];
-    answer3.innerHTML = arr[2];
-    answer4.innerHTML = arr[3];
+    answer1.innerHTML = randomAns();
+    answer2.innerHTML = randomAns();
+    answer3.innerHTML = randomAns();
+    answer4.innerHTML = randomAns();
   }, "300");
   document.getElementById("answers").onclick = (e) => {
     if (e.target.tagName == "BUTTON") {
@@ -100,6 +106,4 @@ btn_next.onclick = () => {
   }, 400);
 };
 renderPokemon();
-setTimeout(() => {
-  renderAnswers();
-}, 400);
+renderAnswers();
