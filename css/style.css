@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,27 +9,57 @@
 }
 body {
   text-align: center;
-  /* background: linear-gradient(to bottom, #6ab7f5, #fff); */
-  background-color: #ef413a;
   min-height: 100vh;
+  background-color: #373740;
 }
-main {
+/* Game css */
+.game_box {
   display: inline-block;
-  margin-top: 2%;
+  margin-top: 10%;
   padding: 15px;
+  width: 35vw;
+  height: 38vh;
   position: relative;
+  min-width: 400px;
 }
-.pokedex {
-  margin-top: 10vh;
-  width: 100%;
-  max-width: 700px;
+.top_bar {
+  height: 12%;
+  background-color: #e84a44;
+  line-height: 4vh;
+  border-radius: 5px 5px 0 0;
+}
+
+.top_bar h1 {
+  color: white;
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: clamp(4px, 2.5vw, 22px);
+  letter-spacing: 3px;
+  text-align: center;
+}
+.game_body {
+  height: 100%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+.poke_bg {
+  top: 25%;
+  left: 7%;
+  width: 17vw;
+  min-width: 170px;
+  height: 23vh;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  position: absolute;
+  border: 1px solid #373740;
+  box-shadow: inset -1px -1px 5px black;
+  border-radius: 2px;
 }
 .pokemon_image {
   position: absolute;
-  top: 60%;
-  left: 53%;
-  transform: scale(2) translate(-45%, 30%);
-  max-height: 30%;
+  top: 45%;
+  left: 33%;
+  transform: scale(1.5) translate(-45%, 30%);
+  max-height: 20%;
 }
 .shadow {
   filter: brightness(0);
@@ -36,95 +68,59 @@ main {
   position: absolute;
   font-weight: 600;
   color: #aaa;
-  bottom: -2%;
-  left: 43%;
+  top: 95%;
+  left: 11%;
   font-size: clamp(4px, 2.5vw, 22px);
 }
 .pokemon_name {
-  color: white;
+  color: #3a444d;
   text-transform: capitalize;
 }
-
-.form {
-  position: absolute;
-  width: 35%;
-  bottom: -15%;
-  right: 32%;
-}
-.input_search {
-  width: 100%;
-  padding: 4%;
-  margin: 2%;
-  outline: none;
-  background-color: #403431;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: 600 color white;
-  font-size: clamp(8px, 5vw, 1.3rem);
-  /* box-shadow: -3px 4px 0 #4d7d3b; */
-}
-.visibleButtons {
-  position: absolute;
-  bottom: -25%;
-  left: 46%;
-  width: 30%;
-  transform: translate(-30%, 0);
-  display: flex;
-  gap: 20px;
-}
-.hiddenButtons {
-  position: absolute;
-  bottom: 20%;
-  right: -30%;
-  width: 30%;
-  transform: translate(-30%, 0);
-  display: flex;
-  gap: 2;
-}
-
-.button {
-  width: 50%;
-  padding: 4%;
-  border-radius: 5px;
-  font-size: clamp(5px, 5vw, 1rem);
-  font-weight: 600;
-  color: white;
-}
-.btn-tip,
-.btn-guess {
-  border: 1px solid #017bc7;
-  background-color: #0995ec;
-  box-shadow: -2px 3px 0 #017bc7;
-}
-.btn-next {
-  display: flex;
-  color: white;
-  background-color: #0995ec;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
+.answer_buttons {
   align-items: center;
-  font-size: 14px;
+  position: absolute;
+  display: block;
+  top: 24%;
+  left: 70%;
+  width: 33%;
+  transform: translate(-30%, 0);
 }
-.btn-next > .arrow {
-  width: 6px;
-  height: 6px;
-  border-right: 2px solid #017bc7;
-  border-bottom: 2px solid #017bc7;
-  position: relative;
-  transform: rotate(-45deg);
-  margin: 0 6px;
-  transition: all 0.3s ease;
+.answer {
+  margin: 7.5px;
+  width: 100%;
+  /* height: 40px; */
+  padding: 5%;
+  border: none;
+  border-radius: 2px;
+  font-size: clamp(5px, 5vw, 1rem);
+  background-color: #e84a44;
+  color: white;
 }
 
+.game_buttons {
+  position: absolute;
+  display: flex;
+  top: 90%;
+  left: 73.5%;
+  width: 30%;
+  transform: translate(-30%, 0);
+  gap: 2vw;
+}
+.button {
+  width: 60%;
+  padding: 5%;
+  border: none;
+  border-radius: 2px;
+  font-size: clamp(5px, 5vw, 1rem);
+  background-color: #373740;
+  color: white;
+}
 .hidden {
   visibility: hidden;
 }
-.button:hover {
+.correct {
+  background-color: #67a0fb;
+}
+button:hover {
   cursor: pointer;
 }
-/* .button:active {
-  box-shadow: inset -4px 4px 0;
-  font-size: 0.9rem;
-} */

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./favicons/favicon-16x16.png" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -9,29 +10,27 @@
     <title>Who's that pokémon?</title>
   </head>
   <body>
-    <main>
-      <img src="./images/rotom-dex.png" alt="pokedex" class="pokedex" />
-      <img src="#" alt="" class="pokemon_image shadow" />
-      <h1 class="pokemon_data">
-        <span class="pokemon_number">#</span> -
-        <span class="pokemon_name">Pokemon</span>
-      </h1>
-
-      <form class="form">
-        <input
-          type="search"
-          class="input_search"
-          placeholder="Name or Number"
-          required
-        />
-      </form>
-      <div class="visibleButtons">
-        <button class="button btn-tip">Tip</button>
-        <button class="button btn-guess">Guess</button>
+    <div class="game_page">
+      <div class="game_box">
+        <div class="top_bar"><h1>Who's that pokémon?</h1></div>
+        <div class="game_body"></div>
+        <div class="poke_bg"></div>
+        <img src="#" class="pokemon_image shadow" alt="" />
+        <h1 class="pokemon_data">
+          <span class="pokemon_number">#</span> -
+          <span class="pokemon_name">Pokemon Name</span>
+        </h1>
+        <div class="answer_buttons" id="answers">
+          <button class="answer answer_one" id="answer1">#</button>
+          <button class="answer answer_two" id="answer2">#</button>
+          <button class="answer answer_three" id="answer3">#</button>
+          <button class="answer answer_four" id="answer4">#</button>
+        </div>
+        <div class="game_buttons">
+          <button class="button btn_restart hidden">Restart</button
+          ><button class="button btn_next hidden">Next</button>
+        </div>
       </div>
-      <div class="hiddenButtons">
-        <button class="btn-next hidden">Next<span class="arrow"></span></button>
-      </div>
-    </main>
+    </div>
   </body>
 </html>
