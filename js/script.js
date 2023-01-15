@@ -25,12 +25,13 @@ const renderPokemon = async () => {
 
   const result = pokemonList[generatedPokemon];
   pokemonData = await fetch(result.url).then((p) => p.json());
-  // pokemonName.innerHTML = "Pokemon Name";
-  // pokemonNumber.innerHTML = "#";
-  pokemonImage.src =
-    pokemonData["sprites"]["versions"]["generation-v"]["black-white"][
-      "animated"
-    ]["front_default"];
+  setTimeout(() => {
+    pokemonImage.src =
+      pokemonData["sprites"]["versions"]["generation-v"]["black-white"][
+        "animated"
+      ]["front_default"];
+  }, "300");
+
   answerArr.push(pokemonData.name);
   // console.log(questions);
   return pokemonData;
@@ -56,7 +57,7 @@ function renderAnswers() {
   answerOptions();
   answerOptions();
   answerOptions();
-  console.log(answerArr);
+
   const arr = answerArr;
 
   setTimeout(() => {
@@ -71,43 +72,34 @@ function renderAnswers() {
       checkPokemon();
     }
   };
-  // arr.forEach((element) => (answers.innerHTML = element));
 }
 const checkPokemon = async () => {
   const data = pokemonData;
   const button = document.getElementById(checkAnswer);
   const check = button.innerText;
-  // const typeTwo = data.types.length - 1;
-
-  // console.log(
-  //   data.name,
-  //   data.id,
-  //   data.types[0].type.name,
-  //   data.types[typeTwo].type.name
-  // );
-
   if (data.name == check) {
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id;
     pokemonImage.classList.remove("shadow");
     button.classList.add("correct");
     btn_next.classList.remove("hidden");
-    // btnNext.classList.remove("hidden");
   }
 };
-// btnNext.addEventListener("click", () => {
-//   input.disabled = false;
-//   pokemonImage.classList.add("shadow");
-//   btnNext.classList.add("hidden");
-//   renderPokemon();
-// });
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   checkPokemon(input.value);
-//   input.value = "";
-// });
 btn_next.onclick = () => {
-  window.location.reload();
+  answerArr = [];
+  const button = document.getElementById(checkAnswer);
+  pokemonImage.classList.add("shadow");
+  button.classList.remove("correct");
+  btn_next.classList.add("hidden");
+  pokemonName.innerHTML = "Pokemon Name";
+  pokemonNumber.innerHTML = "#";
+
+  renderPokemon();
+  setTimeout(() => {
+    renderAnswers();
+  }, 400);
 };
 renderPokemon();
-renderAnswers();
+setTimeout(() => {
+  renderAnswers();
+}, 400);
