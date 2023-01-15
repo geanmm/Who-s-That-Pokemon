@@ -13,6 +13,26 @@ body {
   min-width: 100vw;
   background-color: #373740;
 }
+.start_game {
+  top: 25%;
+  left: 20%;
+  align-items: center;
+  position: absolute;
+  color: #373740;
+  font-size: clamp(4px, 2.5vw, 22px);
+}
+
+.start_btn {
+  margin: 4vh;
+  width: 30%;
+  padding: 3%;
+  border: none;
+  border-radius: 2px;
+  font-size: clamp(5px, 3vw, 1rem);
+  background-color: #e84a44;
+  color: white;
+}
+
 .game_box {
   display: inline-block;
   margin-top: 10%;
@@ -124,6 +144,26 @@ button:hover {
 }
 
 @media only screen and (max-device-width: 961px) {
+  .start_game {
+    max-width: 50vw;
+    top: 25%;
+    left: 10%;
+    align-items: center;
+    position: absolute;
+    color: #373740;
+    font-size: clamp(1vh, 4vh, 22px);
+  }
+
+  .start_btn {
+    margin: 4vh;
+    width: 50%;
+    padding: 3%;
+    border: none;
+    border-radius: 2px;
+    font-size: clamp(3vh, 6vw, 1rem);
+    background-color: #e84a44;
+    color: white;
+  }
   .game_box {
     display: inline-block;
     margin-top: 2%;
@@ -225,6 +265,26 @@ button:hover {
   }
 }
 @media only screen and (max-device-width: 481px) {
+  .start_game {
+    max-width: 70vw;
+    top: 25%;
+    left: 5%;
+    align-items: center;
+    position: absolute;
+    color: #373740;
+    font-size: clamp(2vh, 2.5vw, 22px);
+  }
+
+  .start_btn {
+    margin: 4vh;
+    width: 50%;
+    padding: 3%;
+    border: none;
+    border-radius: 2px;
+    font-size: clamp(3vh, 6vw, 1rem);
+    background-color: #e84a44;
+    color: white;
+  }
   .game_box {
     display: inline-block;
     margin-top: 10%;

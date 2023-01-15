@@ -11,24 +11,40 @@
   <body>
     <div class="game_page">
       <div class="game_box">
+        <div class="start_game">
+          <h1>Rules:</h1>
+          <p>
+            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+            enim?
+          </p>
+          <p>
+            2. Commodi molestiae voluptas consequuntur voluptatem aspernatur
+            iusto minus necessitatibus.
+          </p>
+          <p>3. Illum veritatis quo quibusdam.</p>
+          <p>4. Illum quo, ad fuga error quidem veritatis.</p>
+          <button class="start_btn">Start</button>
+        </div>
+        <div class="main_game hidden">
+          <div class="poke_bg"></div>
+          <img src="#" class="pokemon_image shadow" alt="" />
+          <h1 class="pokemon_data">
+            <span class="pokemon_number">#</span> -
+            <span class="pokemon_name">Pokemon Name</span>
+          </h1>
+          <div class="answer_buttons" id="answers">
+            <button class="answer answer_one" id="answer1">#</button>
+            <button class="answer answer_two" id="answer2">#</button>
+            <button class="answer answer_three" id="answer3">#</button>
+            <button class="answer answer_four" id="answer4">#</button>
+          </div>
+          <div class="game_buttons">
+            <button class="button btn_restart hidden">Restart</button
+            ><button class="button btn_next hidden">Next</button>
+          </div>
+        </div>
         <div class="top_bar"><h1>Who's that pokémon?</h1></div>
         <div class="game_body"></div>
-        <div class="poke_bg"></div>
-        <img src="#" class="pokemon_image shadow" alt="" />
-        <h1 class="pokemon_data">
-          <span class="pokemon_number">#</span> -
-          <span class="pokemon_name">Pokemon Name</span>
-        </h1>
-        <div class="answer_buttons" id="answers">
-          <button class="answer answer_one" id="answer1">#</button>
-          <button class="answer answer_two" id="answer2">#</button>
-          <button class="answer answer_three" id="answer3">#</button>
-          <button class="answer answer_four" id="answer4">#</button>
-        </div>
-        <div class="game_buttons">
-          <button class="button btn_restart hidden">Restart</button
-          ><button class="button btn_next hidden">Next</button>
-        </div>
       </div>
     </div>
   </body>
