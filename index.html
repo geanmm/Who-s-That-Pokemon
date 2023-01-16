@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,43 +9,22 @@
     <title>Who's that pokémon?</title>
   </head>
   <body>
-    <div class="game_page">
-      <div class="game_box">
-        <div class="start_game">
-          <h1>Rules:</h1>
-          <p>
-            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            enim?
-          </p>
-          <p>
-            2. Commodi molestiae voluptas consequuntur voluptatem aspernatur
-            iusto minus necessitatibus.
-          </p>
-          <p>3. Illum veritatis quo quibusdam.</p>
-          <p>4. Illum quo, ad fuga error quidem veritatis.</p>
-          <button class="start_btn">Start</button>
+    <main>
+      <section>
+        <div id="topbar">
+          <h1 id="title">Who's that pokémon?</h1>
         </div>
-        <div class="main_game hidden">
-          <div class="poke_bg"></div>
-          <img src="#" class="pokemon_image shadow" alt="" />
-          <h1 class="pokemon_data">
-            <span class="pokemon_number">#</span> -
-            <span class="pokemon_name">Pokemon Name</span>
-          </h1>
-          <div class="answer_buttons" id="answers">
-            <button class="answer answer_one" id="answer1">#</button>
-            <button class="answer answer_two" id="answer2">#</button>
-            <button class="answer answer_three" id="answer3">#</button>
-            <button class="answer answer_four" id="answer4">#</button>
+        <div id="game_body">
+          <div id="picture_frame">
+            <img src="" alt="" id="pokemon_pic" class="notSolved" />
           </div>
-          <div class="game_buttons">
-            <button class="button btn_restart hidden">Restart</button
-            ><button class="button btn_next hidden">Next</button>
-          </div>
+          <div id="answ_options"></div>
         </div>
-        <div class="top_bar"><h1>Who's that pokémon?</h1></div>
-        <div class="game_body"></div>
-      </div>
-    </div>
+        <div id="pokemon_data">
+          <h1 id="pokemon_info"># - Pokemon Name</h1>
+          <button id="btn_next" class="hidden">Next</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
