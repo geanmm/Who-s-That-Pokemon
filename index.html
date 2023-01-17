@@ -5,15 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="./favicons/favicon-16x16.png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="./js/script.js"></script>
+
     <title>Who's that pokémon?</title>
   </head>
   <body>
     <main>
-      <section>
-        <div id="topbar">
-          <h1 id="title">Who's that pokémon?</h1>
+      <div id="start" class="">
+        <div id="start_title">Rules of the Game</div>
+        <div id="start_content">
+          <div class="rule">1. You only have 15 seconds for each pokémon.</div>
+          <div class="rule">2. Any wrong answer will be game over.</div>
+          <div class="rule">3. Try to get to your higher score.</div>
+          <button id="start_btn">Start</button>
         </div>
+      </div>
+      <section id="game" class="hidden">
+        <header>
+          <div id="title">Who's that pokémon?</div>
+          <div id="timer">
+            <div id="time_left_txt">Time Left</div>
+            <div id="timer_sec">15</div>
+          </div>
+          <div id="time_line"></div>
+        </header>
         <div id="game_body">
           <div id="picture_frame">
             <img src="" alt="" id="pokemon_pic" class="notSolved" />
@@ -21,10 +35,23 @@
           <div id="answ_options"></div>
         </div>
         <div id="pokemon_data">
-          <h1 id="pokemon_info"># - Pokemon Name</h1>
+          <div id="pokemon_info"># - Pokemon Name</div>
           <button id="btn_next" class="hidden">Next</button>
         </div>
+        <footer>
+          <div>Current score: <span id="user_score">0</span></div>
+        </footer>
       </section>
+      <div id="gameover" class="hidden">
+        <div id="top">Game Over</div>
+        <div id="content">
+          <div id="end_score">
+            Your Score: <span id="user_finalscore"></span>
+          </div>
+          <button id="try_again">Try Again</button>
+        </div>
+      </div>
     </main>
   </body>
+  <script defer src="./js/script.js"></script>
 </html>

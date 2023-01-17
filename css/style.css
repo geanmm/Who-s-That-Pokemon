@@ -21,25 +21,109 @@ main {
   justify-content: center;
   align-items: center;
 }
-main section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
+main #start {
+  position: absolute;
+  min-width: 250px;
+  font-size: 20px;
+  text-align: center;
+}
+main #start #start_title {
+  border-radius: 10px 10px 0 0;
+  color: white;
+  background-color: #e84a44;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
-section #topbar {
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-  background-color: #e84a44;
+main #start #start_content {
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  padding: 15px;
+  align-items: center;
 }
-section #topbar h1 {
+#start_content div {
+  margin-bottom: 10px;
+}
+
+div #start_content button {
+  font-weight: 400;
+  font-size: 15px;
+  margin: 10px;
+  width: 35%;
+  color: white;
   padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #373740;
+}
+div #start_content button:hover {
+  background-color: #67a0fb;
+  cursor: pointer;
+  color: white;
+}
+
+main section {
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 20px; */
+}
+
+section header {
+  position: relative;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e84a44;
+  padding: 0 25px;
+}
+section header #title {
   color: white;
   font-family: "Pokemon Solid", sans-serif;
-  font-size: clamp(10px, 25px, 30px);
-  letter-spacing: 0.15em;
+  font-size: 28px;
+  /* font-size: clamp(10px, 30px, 35px); */
+  letter-spacing: 3px;
 }
+section header #timer {
+  color: #67a0fb;
+  background: white;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+
+section header #timer #time_left_txt {
+  user-select: none;
+}
+section header #timer #timer_sec {
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #67a0fb;
+  /* border: 1px solid #343a40; */
+  user-select: none;
+}
+
+section header #time_line {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 5px;
+  background: #67a0fb;
+}
+
 section #game_body {
   display: flex;
   justify-content: center;
@@ -68,20 +152,34 @@ div #answ_options {
   flex-direction: column;
   justify-content: space-between;
 }
-
 div #answ_options li {
+  border-radius: 5px;
   min-width: 200px;
   list-style: none;
   color: #fff;
   background: #e84a44;
   padding: 10px;
+  text-transform: capitalize;
   text-align: center;
 }
 div #answ_options li:hover {
-  background-color: #f8d537;
+  background-color: #67a0fb;
   cursor: pointer;
-  color: #373740;
 }
+/* div .answ_options li {
+  border-radius: 5px;
+  min-width: 200px;
+  list-style: none;
+  color: #fff;
+  background: #e84a44;
+  padding: 10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+div #answ_options li:hover {
+  background-color: #67a0fb;
+  cursor: pointer;
+} */
 
 div #answ_options li + li {
   margin-top: 16px;
@@ -90,24 +188,24 @@ div #answ_options li + li {
 main #pokemon_data {
   background-color: white;
   display: flex;
-  border-radius: 0 0 10px 10px;
-  text-align: center;
+  justify-content: space-between;
   background-color: #fff;
   padding: 20px;
 }
 
 div #pokemon_info {
+  text-transform: capitalize;
+  font-weight: 600;
   color: #373740;
   font-size: clamp(10px, 30px, 30px);
 }
-
 #pokemon_data button {
+  border-radius: 5px;
   border: none;
-  width: 15%;
-  margin-left: auto;
+  width: 70px;
+  margin-left: 10px;
   color: #fff;
   background-color: #373740;
-  padding: 10px;
   text-align: center;
 }
 
@@ -117,25 +215,90 @@ div #pokemon_info {
   color: #373740;
 }
 
+footer {
+  border-top: 1px solid lightgrey;
+  background-color: #e84a44;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  padding: 5px 20px;
+}
+
+main #gameover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  z-index: 1;
+}
+#gameover #top {
+  border-radius: 10px 10px 0 0;
+  color: white;
+  background-color: #e84a44;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+#gameover #end_score {
+  font-size: 25px;
+  color: #e84a44;
+}
+#end_score span {
+  color: #67a0fb;
+}
+#gameover #content {
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  padding: 20px;
+  align-items: center;
+}
+#content button {
+  font-weight: 400;
+  font-size: 15px;
+  margin: 10px;
+  width: 35%;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #373740;
+}
+#content button:hover {
+  background-color: #67a0fb;
+  cursor: pointer;
+  color: white;
+}
 .notSolved {
   filter: brightness(0);
-}
-.rightAnswer {
-  background-color: #67a0fb;
 }
 .hidden {
   visibility: hidden;
 }
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  section {
-    scale: 2;
-  }
-  section #game_body {
-    flex-direction: column;
-  }
+.disable_listener {
+  pointer-events: none;
+}
 
-  div #picture_frame {
-    margin-right: 0;
-    margin-bottom: 16px;
+@media (max-device-height: 981px) {
+  main section {
+    scale: 0.8;
+  }
+}
+@media (max-device-width: 480px) {
+  main section {
+    /* position: absolute; */
+    display: flex;
+    scale: 1.5;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  main #start {
+    scale: 1.5;
+  }
+  main #gameover {
+    scale: 1.5;
   }
 }
